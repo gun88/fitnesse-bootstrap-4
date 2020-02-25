@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.gun88.fitnesse</groupId>
+    <artifactId>fitnesse-bootstrap-4</artifactId>
+    <version>0.0.1</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <theme.target>${project.build.outputDirectory}/fitnesse/resources/bootstrap-4</theme.target>
+    </properties>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/fitnesse/resources</directory>
+                <targetPath>fitnesse/resources</targetPath>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>com.github.warmuuh</groupId>
+                <artifactId>libsass-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.github.warmuuh</groupId>
+                    <artifactId>libsass-maven-plugin</artifactId>
+                    <version>0.2.10-libsass_3.5.3</version>
+                    <executions>
+                        <execution>
+                            <phase>process-resources</phase>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <inputPath>${theme.target}/scss/fitnesse-bootstrap.scss</inputPath>
+                        <outputPath>${theme.target}/css/fitnesse-bootstrap.min.css</outputPath>
+                        <sourceMapOutputPath>${theme.target}/css/fitnesse-bootstrap.min.css.map</sourceMapOutputPath>
+                        <outputStyle>compressed</outputStyle>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>1.8</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>production</id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>com.github.warmuuh</groupId>
+                            <artifactId>libsass-maven-plugin</artifactId>
+                            <configuration>
+                                <omitSourceMapingURL>true</omitSourceMapingURL>
+                                <generateSourceMap>false</generateSourceMap>
+                            </configuration>
+                        </plugin>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-antrun-plugin</artifactId>
+                            <executions>
+                                <execution>
+                                    <phase>process-resources</phase>
+                                    <goals>
+                                        <goal>run</goal>
+                                    </goals>
+                                    <configuration>
+                                        <target>
+                                            <delete dir="${theme.target}/scss" includeemptydirs="true"/>
+                                            <delete file="${theme.target}/js/bootstrap.min.js.map"/>
+                                            <replace file="${theme.target}/js/bootstrap.min.js"
+                                                     token="//# sourceMappingURL=bootstrap.min.js.map" value=""/>
+                                        </target>
+                                    </configuration>
+                                </execution>
+                            </executions>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+    </profiles>
+
+
+</project>
