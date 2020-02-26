@@ -5,6 +5,13 @@
 1. Download release file: [fitnesse-bootstrap-4-1.0.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/latest/download/fitnesse-bootstrap-4-1.0.0.jar)
 2. Put `fitnesse-bootstrap-4-1.0.0.jar` in the same direcotry of `fitnesse-standalone.jar`
 3. Run the command:
+
+Unix-based systems
+  ```
+  java -DTheme=bootstrap-4 -cp fitnesse-bootstrap-4-1.0.0.jar:fitnesse-standalone.jar fitnesseMain.FitNesseMain
+  ```
+
+Windows
   ```
   java -DTheme=bootstrap-4 -cp fitnesse-bootstrap-4-1.0.0.jar;fitnesse-standalone.jar fitnesseMain.FitNesseMain
   ```
@@ -43,7 +50,15 @@ Two configuration are needed to run FitNesse with `fitnesse-bootstrap-4` theme:
 *Note: theme name can be provided via VM option, environment variable and configuration 
 file. [Read More...](http://fitnesse.org/FitNesse.UserGuide.AdministeringFitNesse.ConfigurationFile)*
 
-Supposing that `/path/to/fitnesse-bootstrap-4-1.0.0.jar` is the path to our theme, `/path/to/fitnesse-standalone.jar` is the path to FitNesse and we want to provide theme name via VM option `-DTheme=bootstrap-4`, the following command can be executed:
+Supposing that `/path/to/fitnesse-bootstrap-4-1.0.0.jar` is the path to our theme, `/path/to/fitnesse-standalone.jar` is 
+the path to FitNesse and we want to provide theme name via VM option `-DTheme=bootstrap-4`, the following command can be 
+executed:
+
+Unix-based systems
+```
+java -DTheme=bootstrap-4 -cp /path/to/fitnesse-bootstrap-4-1.0.0.jar:/path/to/fitnesse-standalone.jar fitnesseMain.FitNesseMain
+```
+Windows
 ```
 java -DTheme=bootstrap-4 -cp /path/to/fitnesse-bootstrap-4-1.0.0.jar;/path/to/fitnesse-standalone.jar fitnesseMain.FitNesseMain
 ```
