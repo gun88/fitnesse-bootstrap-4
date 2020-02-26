@@ -6,7 +6,7 @@
 
     <groupId>com.gun88.fitnesse</groupId>
     <artifactId>fitnesse-bootstrap-4</artifactId>
-    <version>0.0.1</version>
+    <version>1.0.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,8 +16,7 @@
     <build>
         <resources>
             <resource>
-                <directory>src/fitnesse/resources</directory>
-                <targetPath>fitnesse/resources</targetPath>
+                <directory>src</directory>
             </resource>
         </resources>
         <plugins>
@@ -45,9 +44,9 @@
                         </execution>
                     </executions>
                     <configuration>
-                        <inputPath>${theme.target}/scss/fitnesse-bootstrap.scss</inputPath>
-                        <outputPath>${theme.target}/css/fitnesse-bootstrap.min.css</outputPath>
-                        <sourceMapOutputPath>${theme.target}/css/fitnesse-bootstrap.min.css.map</sourceMapOutputPath>
+                        <inputPath>${theme.target}/scss</inputPath>
+                        <outputPath>${theme.target}/css</outputPath>
+                        <sourceMapOutputPath>${theme.target}/css</sourceMapOutputPath>
                         <outputStyle>compressed</outputStyle>
                     </configuration>
                 </plugin>

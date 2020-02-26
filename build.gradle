@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'io.miret.etienne.sass' version '1.1.0' }
+
+version '1.0.0'
+buildDir 'target'
+
+def themeTarget = "${buildDir}/classes/fitnesse/resources/bootstrap-4"
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src"]
+        }
+        output.resourcesDir = "${buildDir}/classes"
+    }
+}
+
+task filterScssAndMapFiles() {
+    if (project.hasProperty('production')) {
+        doLast {
+            ant.replace(
+                    file: "${themeTarget}/js/bootstrap.min.js",
+                    token: "//# sourceMappingURL=bootstrap.min.js.map",
+                    value: "")
+            ant.delete(dir: "${themeTarget}/scss", includeemptydirs: "true")
+            ant.delete(file: "${themeTarget}/js/bootstrap.min.js.map")
+        }
+    }
+    dependsOn compileSass
+}
+
+
+compileSass {
+    sourceDir = project.file("${themeTarget}/scss")
+    outputDir = project.file("${themeTarget}/css")
+    style = compressed
+    if (project.hasProperty('production'))
+        sourceMap = none
+}
+
+jar {
+    dependsOn filterScssAndMapFiles
+    destinationDirectory = file(buildDir)
+}
