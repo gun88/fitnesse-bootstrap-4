@@ -10,21 +10,30 @@
   ```
 4. Connect to FitNesse: http://localhost/
 
+## Table of Contents
+
+- [Quick Start](#quick-start)
+- [Build](#build)
+  - [Gradle](#gradle)
+  - [Maven](#maven)
+  - [Production](#production)
+- [Running Command](#running-command)
+- [Releases](#releases)
+
 ## Build
 The fitnesse-bootstrap-4 build can be executed via Gradle and Maven. Gradle and Maven 
 wrappers are distributed with code.
-### Build with Maven
-Execute ```mvn package``` (or ```mvnw package``` for Maven wrapper)
-### Build with Gradle
-Execute ```gradle build``` (or ```gradlew build``` for Gradle wrapper)
-### Production Build
+### Gradle
+Execute `gradle build` (or `gradlew build` for Gradle wrapper)
+### Maven
+Execute `mvn package` (or `mvnw package` for Maven wrapper)
+### Production
 A production profile is available for building a lightweight archive. To perform a 
 production build, just add `-Pproduction` at the end of the build command.
 
-E.g.: ```mvnw package -Pproduction``` - ```gradlew package -Pproduction``` 
+E.g.: `gradlew build -Pproduction` - `mvnw package -Pproduction`
 
 *Note: size of the production build is the outcome of `.scss` and `.map` files deletion.*
-
 
 ### Running Command
 Two configuration are needed to run FitNesse with `fitnesse-bootstrap-4` theme:
