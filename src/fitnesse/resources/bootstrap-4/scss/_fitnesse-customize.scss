@@ -582,16 +582,18 @@ td.passed_tests {
 }
 
 .modal-dialog > div {
-  padding: unset;
-  box-shadow: unset;
-  border-radius: unset;
-  margin: unset;
-  margin-left: unset;
-  z-index: unset;
-  top: unset;
-  -webkit-transform: unset;
-  -ms-transform: unset;
-  -o-transform: unset;
-  transform: unset;
-  @extend .modal-content;
+
+  input[type='text'] {
+    @extend .form-control;
+  }
+
+  .help-list {
+    h4{
+      margin-top: 1rem;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
 }
