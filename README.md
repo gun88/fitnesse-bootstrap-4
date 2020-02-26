@@ -2,7 +2,7 @@
 [Bootstrap 4](https://getbootstrap.com/)  theme for [FitNesse](http://fitnesse.org/)
 
 ## Quick Start
-1. Download release file: [fitnesse-bootstrap-4-1.0.0.jar](https://getbootstrap.com/)
+1. Download release file: [fitnesse-bootstrap-4-1.0.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/latest/download/fitnesse-bootstrap-4-1.0.0.jar)
 2. Put `fitnesse-bootstrap-4-1.0.0.jar` in the same direcotry of `fitnesse-standalone.jar`
 3. Run the command:
   ```
