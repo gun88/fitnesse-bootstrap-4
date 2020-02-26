@@ -41,5 +41,5 @@ java -DTheme=bootstrap-4 -cp /path/to/fitnesse-bootstrap-4-1.0.0.jar;/path/to/fi
 
 ## Releases
 ### v1.0.0
- - [fitnesse-bootstrap-4-1.0.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/latest/fitnesse-bootstrap-4-1.0.0.jar)
- - [fitnesse-bootstrap-production-4-1.0.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/latest/fitnesse-bootstrap-4-production-1.0.0.jar)
+ - [fitnesse-bootstrap-4-1.0.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/latest/download/fitnesse-bootstrap-4-1.0.0.jar)
+ - [fitnesse-bootstrap-production-4-1.0.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/latest/download/fitnesse-bootstrap-4-production-1.0.0.jar)
