@@ -25,5 +25,19 @@ E.g.: ```mvnw package -Pproduction``` - ```gradlew package -Pproduction```
 
 *Note: size of the production build is the outcome of `.scss` and `.map` files deletion.*
 
-## Releases
 
+### Running Command
+Two configuration are needed to run FitNesse with `fitnesse-bootstrap-4` theme:
+1. The `fitnesse-bootstrap-4-1.0.0.jar` must be available in the java classpath
+2. The theme name (defined via the property with key `Theme`) must be: `bootstrap-4`
+
+*Note: theme name can be provided via VM option, environment variable and configuration 
+file. [Read More...](http://fitnesse.org/FitNesse.UserGuide.AdministeringFitNesse.ConfigurationFile)*
+
+Supposing that /path/to/fitnesse-bootstrap-4-1.0.0.jar is the path to our theme, /path/to/fitnesse-standalone.jar is the path to FitNesse and we want to provide theme name via VM option -DTheme=bootstrap-4, the following command can be executed>
+```
+java -DTheme=bootstrap-4 -cp /path/to/fitnesse-bootstrap-4-1.0.0.jar;/path/to/fitnesse-standalone.jar fitnesseMain.FitNesseMain
+```
+
+## Releases
+...
