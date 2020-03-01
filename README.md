@@ -30,6 +30,11 @@ Windows
 ## Build
 The fitnesse-bootstrap-4 build can be executed via Gradle and Maven. Gradle and Maven 
 wrappers are distributed with code.
+
+Produced build will be a jar named `fitensse-bootstrap-4-1.0.0.jar`, available under `target` directory for both Maven and Gradle mode.
+
+*Note: version number in jar name may changes*
+
 ### Gradle
 Execute `gradle build` (or `gradlew build` for Gradle wrapper)
 ### Maven
