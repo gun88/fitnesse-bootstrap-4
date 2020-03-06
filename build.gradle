@@ -2,7 +2,7 @@ plugins {
     id 'java'
     id 'io.miret.etienne.sass' version '1.1.0' }
 
-version '1.0.0'
+version '1.0.1'
 buildDir 'target'
 
 def themeTarget = "${buildDir}/classes/fitnesse/resources/bootstrap-4"

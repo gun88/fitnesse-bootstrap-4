@@ -2,18 +2,18 @@
 [Bootstrap 4](https://getbootstrap.com/)  theme for [FitNesse](http://fitnesse.org/)
 
 ## Quick Start
-1. Download release file: [fitnesse-bootstrap-4-1.0.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/latest/download/fitnesse-bootstrap-4-1.0.0.jar)
-2. Put `fitnesse-bootstrap-4-1.0.0.jar` in the same direcotry of `fitnesse-standalone.jar`
+1. Download release file: [fitnesse-bootstrap-4-1.0.1.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.0.1/fitnesse-bootstrap-4-1.0.1.jar)
+2. Put `fitnesse-bootstrap-4-1.0.1.jar` in the same direcotry of `fitnesse-standalone.jar`
 3. Run the command:
 
 Unix-based systems
   ```
-  java -DTheme=bootstrap-4 -cp fitnesse-bootstrap-4-1.0.0.jar:fitnesse-standalone.jar fitnesseMain.FitNesseMain
+  java -DTheme=bootstrap-4 -cp fitnesse-bootstrap-4-1.0.1.jar:fitnesse-standalone.jar fitnesseMain.FitNesseMain
   ```
 
 Windows
   ```
-  java -DTheme=bootstrap-4 -cp fitnesse-bootstrap-4-1.0.0.jar;fitnesse-standalone.jar fitnesseMain.FitNesseMain
+  java -DTheme=bootstrap-4 -cp fitnesse-bootstrap-4-1.0.1.jar;fitnesse-standalone.jar fitnesseMain.FitNesseMain
   ```
 4. Connect to FitNesse: http://localhost/
 
@@ -31,7 +31,7 @@ Windows
 The fitnesse-bootstrap-4 build can be executed via Gradle and Maven. Gradle and Maven 
 wrappers are distributed with code.
 
-Produced build will be a jar named `fitensse-bootstrap-4-1.0.0.jar`, available under `target` directory for both Maven and Gradle mode.
+Produced build will be a jar named `fitnesse-bootstrap-4-1.0.1.jar`, available under `target` directory for both Maven and Gradle mode.
 
 *Note: version number in jar name may changes*
 
@@ -49,26 +49,31 @@ E.g.: `gradlew build -Pproduction` - `mvnw package -Pproduction`
 
 ### Running Command
 Two configuration are needed to run FitNesse with `fitnesse-bootstrap-4` theme:
-1. The `fitnesse-bootstrap-4-1.0.0.jar` must be available in the java classpath
+1. The `fitnesse-bootstrap-4-1.0.1.jar` must be available in the java classpath
 2. The theme name (defined via the property with key `Theme`) must be: `bootstrap-4`
 
 *Note: theme name can be provided via VM option, environment variable and configuration 
 file. [Read More...](http://fitnesse.org/FitNesse.UserGuide.AdministeringFitNesse.ConfigurationFile)*
 
-Supposing that `/path/to/fitnesse-bootstrap-4-1.0.0.jar` is the path to our theme, `/path/to/fitnesse-standalone.jar` is 
+Supposing that `/path/to/fitnesse-bootstrap-4-1.0.1.jar` is the path to our theme, `/path/to/fitnesse-standalone.jar` is 
 the path to FitNesse and we want to provide theme name via VM option `-DTheme=bootstrap-4`, the following command can be 
 executed:
 
 Unix-based systems
 ```
-java -DTheme=bootstrap-4 -cp /path/to/fitnesse-bootstrap-4-1.0.0.jar:/path/to/fitnesse-standalone.jar fitnesseMain.FitNesseMain
+java -DTheme=bootstrap-4 -cp /path/to/fitnesse-bootstrap-4-1.0.1.jar:/path/to/fitnesse-standalone.jar fitnesseMain.FitNesseMain
 ```
 Windows
 ```
-java -DTheme=bootstrap-4 -cp /path/to/fitnesse-bootstrap-4-1.0.0.jar;/path/to/fitnesse-standalone.jar fitnesseMain.FitNesseMain
+java -DTheme=bootstrap-4 -cp /path/to/fitnesse-bootstrap-4-1.0.1.jar;/path/to/fitnesse-standalone.jar fitnesseMain.FitNesseMain
 ```
 
 ## Releases
+### v1.0.1 (Leading slash bug fixed)
+ - [fitnesse-bootstrap-4-1.0.1.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.0.1/fitnesse-bootstrap-4-1.0.1.jar)
+ - [fitnesse-bootstrap-production-4-1.0.1.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.0.1/fitnesse-bootstrap-4-production-1.0.1.jar)
+
+
 ### v1.0.0
- - [fitnesse-bootstrap-4-1.0.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/latest/download/fitnesse-bootstrap-4-1.0.0.jar)
- - [fitnesse-bootstrap-production-4-1.0.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/latest/download/fitnesse-bootstrap-4-production-1.0.0.jar)
+ - [fitnesse-bootstrap-4-1.0.1.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.0.0/fitnesse-bootstrap-4-1.0.0.jar)
+ - [fitnesse-bootstrap-production-4-1.0.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.0.0/fitnesse-bootstrap-4-production-1.0.0.jar)
