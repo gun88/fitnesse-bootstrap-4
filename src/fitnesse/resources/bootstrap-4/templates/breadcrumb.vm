@@ -4,7 +4,7 @@
             <li class="breadcrumb-item"><a href="${contextRoot}$breadCrumb.Link">$breadCrumb.Name</a></li>
         #end
         <li class="breadcrumb-item active" aria-current="page">
-            #if($pageTitle.Link)<a href="/$pageTitle.Link">$pageTitle.Title </a>#else$pageTitle.Title #end
+            #if($pageTitle.Link)<a href="${contextRoot}$pageTitle.Link">$pageTitle.Title </a>#else$pageTitle.Title #end
             #if($pageTitle.pageTags)
                 #foreach($tag in $!pageTitle.pageTagsArray)<span class="tag">$tag</span>#end#end</li>
     </ol>
