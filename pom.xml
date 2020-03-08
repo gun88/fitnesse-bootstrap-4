@@ -3,12 +3,36 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>it.gun88.fitnesse</groupId>
+    <groupId>com.github.gun88</groupId>
     <artifactId>fitnesse-bootstrap-4</artifactId>
-    <version>1.1.0</version>
-    <url>https://github.com/gun88/fitnesse-bootstrap-4</url>
+    <version>1.1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
     <name>FitNesse Bootstrap 4</name>
     <description>Bootstrap 4 Theme for FitNesse</description>
+    <url>https://github.com/gun88/fitnesse-bootstrap-4</url>
+
+    <licenses>
+        <license>
+            <name>Mozilla Public License Version 2.0</name>
+            <url>https://www.mozilla.org/media/MPL/2.0/index.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>gun88</id>
+            <name>Tommaso Pomante</name>
+            <url>https://www.linkedin.com/in/tommaso-pomante</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/gun88/fitnesse-bootstrap-4.git</connection>
+        <url>https://github.com/gun88/fitnesse-bootstrap-4.git</url>
+        <developerConnection>scm:git:git://github.com/gun88/fitnesse-bootstrap-4.git</developerConnection>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -45,25 +69,82 @@
                     <outputStyle>compressed</outputStyle>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <useReleaseProfile>false</useReleaseProfile>
+                    <!-- references the profile defined just below -->
+                    <releaseProfiles>release</releaseProfiles>
+                    <goals>deploy</goals>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
-    <licenses>
-        <license>
-            <name>Mozilla Public License Version 2.0</name>
-            <url>https://www.mozilla.org/media/MPL/2.0/index.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>3.1.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
-    <developers>
-        <developer>
-            <id>gun88</id>
-            <name>Tommaso Pomante</name>
-            <email>fitnesse@gun88.it</email>
-            <organization>gun88.it</organization>
-            <organizationUrl>https://www.linkedin.com/in/tommaso-pomante</organizationUrl>
-        </developer>
-    </developers>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <name>Maven Central Snapshot Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <name>Maven Central Staging Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
 
 </project>
