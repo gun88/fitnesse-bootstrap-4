@@ -2,20 +2,9 @@
 [Bootstrap 4](https://getbootstrap.com/)  theme for [FitNesse](http://fitnesse.org/)
 
 ## Quick Start
-1. Download release file: [fitnesse-bootstrap-4-1.0.1.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.0.1/fitnesse-bootstrap-4-1.0.1.jar)
-2. Put `fitnesse-bootstrap-4-1.0.1.jar` in the same direcotry of `fitnesse-standalone.jar`
-3. Run the command:
-
-Unix-based systems
-  ```
-  java -DTheme=bootstrap-4 -cp fitnesse-bootstrap-4-1.0.1.jar:fitnesse-standalone.jar fitnesseMain.FitNesseMain
-  ```
-
-Windows
-  ```
-  java -DTheme=bootstrap-4 -cp fitnesse-bootstrap-4-1.0.1.jar;fitnesse-standalone.jar fitnesseMain.FitNesseMain
-  ```
-4. Connect to FitNesse: http://localhost/
+1. Download release file: [fitnesse-bootstrap-4-1.1.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.1.0/fitnesse-bootstrap-4-1.1.0.jar)
+2. Put `fitnesse-bootstrap-4-1.1.0.jar` in the `plugins` directory (or add it to the classpath)
+3. Run FitNesse
 
 ## Table of Contents
 
@@ -23,55 +12,58 @@ Windows
 - [Build](#build)
   - [Gradle](#gradle)
   - [Maven](#maven)
-  - [Production](#production)
-- [Running Command](#running-command)
+- [Running](#running)
+  - [Standard Mode](#standard-mode)
+  - [Classpath Mode](#classpath-mode)
 - [Releases](#releases)
 
 ## Build
 The fitnesse-bootstrap-4 build can be executed via Gradle and Maven. Gradle and Maven 
 wrappers are distributed with code.
 
-Produced build will be a jar named `fitnesse-bootstrap-4-1.0.1.jar`, available under `target` directory for both Maven and Gradle mode.
+Produced build will be a jar named `fitnesse-bootstrap-4-x.y.z.jar`, available under `target` directory for both Maven and Gradle mode.
 
-*Note: version number in jar name may changes*
+*Note: build version number instead of `x.y.z`*
 
 ### Gradle
 Execute `gradle build` (or `gradlew build` for Gradle wrapper)
 ### Maven
 Execute `mvn package` (or `mvnw package` for Maven wrapper)
-### Production
-A production profile is available for building a lightweight archive. To perform a 
-production build, just add `-Pproduction` at the end of the build command.
 
-E.g.: `gradlew build -Pproduction` - `mvnw package -Pproduction`
+## Running
+To run FitNesse with Bootstrap 4 theme, `fitnesse-bootstrap-4-x.y.z.jar` must be available in the plugins 
+directory or in the java classpath.
 
-*Note: size of the production build is the outcome of `.scss` and `.map` files deletion.*
+#### Warnings
+1. If multiple theme plugins are available in the plugins directory (or in the classpath), another theme 
+could override Bootstrap 4 theme.
+2. If theme name different from `bootstrap-4` is provided via [configuration file](http://fitnesse.org/FitNesse.UserGuide.AdministeringFitNesse.ConfigurationFile) 
+(or VM option `-DTheme=...`), the Bootstrap 4 them won't be loaded.
 
-### Running Command
-Two configuration are needed to run FitNesse with `fitnesse-bootstrap-4` theme:
-1. The `fitnesse-bootstrap-4-1.0.1.jar` must be available in the java classpath
-2. The theme name (defined via the property with key `Theme`) must be: `bootstrap-4`
+### Standard mode
+Place `fitnesse-bootstrap-4-x.y.z.jar` into plugins directory and run/restart FitNesse.
 
-*Note: theme name can be provided via VM option, environment variable and configuration 
-file. [Read More...](http://fitnesse.org/FitNesse.UserGuide.AdministeringFitNesse.ConfigurationFile)*
-
-Supposing that `/path/to/fitnesse-bootstrap-4-1.0.1.jar` is the path to our theme, `/path/to/fitnesse-standalone.jar` is 
+### Classpath mode
+Supposing that `/path/to/fitnesse-bootstrap-4-x.y.z.jar` is the path to our theme, `/path/to/fitnesse-standalone.jar` is 
 the path to FitNesse and we want to provide theme name via VM option `-DTheme=bootstrap-4`, the following command can be 
 executed:
 
 Unix-based systems
 ```
-java -DTheme=bootstrap-4 -cp /path/to/fitnesse-bootstrap-4-1.0.1.jar:/path/to/fitnesse-standalone.jar fitnesseMain.FitNesseMain
+java -DTheme=bootstrap-4 -cp /path/to/fitnesse-bootstrap-4-x.y.z.jar:/path/to/fitnesse-standalone.jar fitnesseMain.FitNesseMain
 ```
 Windows
 ```
-java -DTheme=bootstrap-4 -cp /path/to/fitnesse-bootstrap-4-1.0.1.jar;/path/to/fitnesse-standalone.jar fitnesseMain.FitNesseMain
+java -DTheme=bootstrap-4 -cp /path/to/fitnesse-bootstrap-4-x.y.z.jar;/path/to/fitnesse-standalone.jar fitnesseMain.FitNesseMain
 ```
 
 ## Releases
+### v1.1.0 (Theme as a plugin)
+ - [fitnesse-bootstrap-4-1.1.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.1.0/fitnesse-bootstrap-4-1.1.0.jar)
+
 ### v1.0.1 (Leading slash bug fixed)
- - [fitnesse-bootstrap-4-1.0.1.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.0.1/fitnesse-bootstrap-4-1.0.1.jar)
- - [fitnesse-bootstrap-4-production-1.0.1.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.0.1/fitnesse-bootstrap-4-production-1.0.1.jar)
+ - [fitnesse-bootstrap-4-1.0.1.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.1.0/fitnesse-bootstrap-4-1.0.1.jar)
+ - [fitnesse-bootstrap-4-production-1.0.1.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.1.0/fitnesse-bootstrap-4-production-1.0.1.jar)
 
 
 ### v1.0.0
