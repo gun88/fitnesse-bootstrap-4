@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.gun88</groupId>
     <artifactId>fitnesse-bootstrap-4</artifactId>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
     <name>FitNesse Bootstrap 4</name>
@@ -70,17 +70,17 @@
                 </configuration>
             </plugin>
 
-            <plugin>
+            <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <useReleaseProfile>false</useReleaseProfile>
-                    <!-- references the profile defined just below -->
+                    &lt;!&ndash; references the profile defined just below &ndash;&gt;
                     <releaseProfiles>release</releaseProfiles>
                     <goals>deploy</goals>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 
