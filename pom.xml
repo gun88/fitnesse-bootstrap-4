@@ -30,7 +30,6 @@
         <url>https://github.com/gun88/fitnesse-bootstrap-4.git</url>
         <connection>scm:git:https://github.com/gun88/fitnesse-bootstrap-4.git</connection>
         <developerConnection>scm:git:https://github.com/gun88/fitnesse-bootstrap-4.git</developerConnection>
-    <tag>HEAD</tag>
   </scm>
 
     <properties>
