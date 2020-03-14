@@ -76,7 +76,7 @@
                 <configuration>
                     <goals>pre-integration-test</goals>
                     <preparationGoals>clean package</preparationGoals>
-                    <!--<tagNameFormat>v@{project.version}</tagNameFormat>-->
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
 
                     <!--<autoVersionSubmodules>true</autoVersionSubmodules>
                     <useReleaseProfile>false</useReleaseProfile>
