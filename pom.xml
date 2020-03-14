@@ -32,6 +32,7 @@
         <connection>scm:git:git://github.com/gun88/fitnesse-bootstrap-4.git</connection>
         <url>https://github.com/gun88/fitnesse-bootstrap-4.git</url>
         <developerConnection>scm:git:git://github.com/gun88/fitnesse-bootstrap-4.git</developerConnection>
+        <tag>v@{project.version}</tag>
     </scm>
 
     <properties>
@@ -70,17 +71,23 @@
                 </configuration>
             </plugin>
 
-            <!--<plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
                 <configuration>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <goals>pre-integration-test</goals>
+                    <preparationGoals>package</preparationGoals>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                    <remoteTagging>false</remoteTagging>
+
+                    <!--<autoVersionSubmodules>true</autoVersionSubmodules>
                     <useReleaseProfile>false</useReleaseProfile>
                     &lt;!&ndash; references the profile defined just below &ndash;&gt;
                     <releaseProfiles>release</releaseProfiles>
-                    <goals>deploy</goals>
+                    <goals>deploy</goals>-->
                 </configuration>
-            </plugin>-->
+            </plugin>
         </plugins>
     </build>
 
@@ -134,7 +141,7 @@
         </profile>
     </profiles>
 
-    <distributionManagement>
+    <!--<distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
             <name>Maven Central Snapshot Repository</name>
@@ -145,6 +152,6 @@
             <name>Maven Central Staging Repository</name>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement>-->
 
 </project>
