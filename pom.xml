@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.gun88</groupId>
     <artifactId>fitnesse-bootstrap-4</artifactId>
-    <version>0.0.1_SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>FitNesse Bootstrap 4</name>
