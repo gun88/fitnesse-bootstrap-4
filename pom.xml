@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.gun88</groupId>
     <artifactId>fitnesse-bootstrap-4</artifactId>
@@ -30,8 +31,7 @@
         <url>https://github.com/gun88/fitnesse-bootstrap-4.git</url>
         <connection>scm:git:https://github.com/gun88/fitnesse-bootstrap-4.git</connection>
         <developerConnection>scm:git:https://github.com/gun88/fitnesse-bootstrap-4.git</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -74,7 +74,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>3.0.0-M1</version>
                 <configuration>
-                    <goals>pre-integration-test</goals>
+                    <goals>deploy</goals>
                     <preparationGoals>clean package</preparationGoals>
                     <tagNameFormat>v@{project.version}</tagNameFormat>
 
@@ -138,7 +138,7 @@
         </profile>
     </profiles>
 
-    <!--<distributionManagement>
+    <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
             <name>Maven Central Snapshot Repository</name>
@@ -149,6 +149,6 @@
             <name>Maven Central Staging Repository</name>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
-    </distributionManagement>-->
+    </distributionManagement>
 
 </project>
