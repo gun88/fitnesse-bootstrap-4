@@ -30,8 +30,8 @@
         <url>https://github.com/gun88/fitnesse-bootstrap-4.git</url>
         <connection>scm:git:https://github.com/gun88/fitnesse-bootstrap-4.git</connection>
         <developerConnection>scm:git:https://github.com/gun88/fitnesse-bootstrap-4.git</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -74,7 +74,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>3.0.0-M1</version>
                 <configuration>
-                    <goals>jnjnj</goals>
+                    <goals>package</goals>
                     <tagNameFormat>v@{project.version}</tagNameFormat>
                     <releaseProfiles>release</releaseProfiles>
                     <useReleaseProfile>false</useReleaseProfile>
