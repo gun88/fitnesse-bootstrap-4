@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.gun88</groupId>
     <artifactId>fitnesse-bootstrap-4</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
     <name>FitNesse Bootstrap 4</name>
@@ -30,7 +30,8 @@
         <url>https://github.com/gun88/fitnesse-bootstrap-4.git</url>
         <connection>scm:git:https://github.com/gun88/fitnesse-bootstrap-4.git</connection>
         <developerConnection>scm:git:https://github.com/gun88/fitnesse-bootstrap-4.git</developerConnection>
-    </scm>
+      <tag>v0.0.1</tag>
+  </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
