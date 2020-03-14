@@ -75,14 +75,10 @@
                 <version>3.0.0-M1</version>
                 <configuration>
                     <goals>deploy</goals>
-                    <preparationGoals>clean package</preparationGoals>
                     <tagNameFormat>v@{project.version}</tagNameFormat>
-
-                    <!--<autoVersionSubmodules>true</autoVersionSubmodules>
-                    <useReleaseProfile>false</useReleaseProfile>
-                    &lt;!&ndash; references the profile defined just below &ndash;&gt;
                     <releaseProfiles>release</releaseProfiles>
-                    <goals>deploy</goals>-->
+                    <useReleaseProfile>false</useReleaseProfile>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
             </plugin>
         </plugins>
