@@ -1,7 +1,6 @@
 # fitnesse-bootstrap-4
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.gun88/fitnesse-bootstrap-4.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.gun88%22%20AND%20a:%22fitnesse-bootstrap-4%22)
 
-[Bootstrap 4](https://getbootstrap.com/)  theme for [FitNesse](http://fitnesse.org/)
+[Bootstrap 4](https://getbootstrap.com/)  theme for [FitNesse](http://fitnesse.org/) - [![Maven Central](https://img.shields.io/maven-central/v/com.github.gun88/fitnesse-bootstrap-4.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.gun88%22%20AND%20a:%22fitnesse-bootstrap-4%22)
 
 ## Quick Start
 1. Download release file: [fitnesse-bootstrap-4-1.1.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.1.0/fitnesse-bootstrap-4-1.1.0.jar)
@@ -66,7 +65,6 @@ java -DTheme=bootstrap-4 -cp /path/to/fitnesse-bootstrap-4-x.y.z.jar;/path/to/fi
 ### v1.0.1 (Leading slash bug fixed)
  - [fitnesse-bootstrap-4-1.0.1.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.1.0/fitnesse-bootstrap-4-1.0.1.jar)
  - [fitnesse-bootstrap-4-production-1.0.1.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.1.0/fitnesse-bootstrap-4-production-1.0.1.jar)
-
 
 ### v1.0.0
  - [fitnesse-bootstrap-4-1.0.0.jar](https://github.com/gun88/fitnesse-bootstrap-4/releases/download/v1.0.0/fitnesse-bootstrap-4-1.0.0.jar)
