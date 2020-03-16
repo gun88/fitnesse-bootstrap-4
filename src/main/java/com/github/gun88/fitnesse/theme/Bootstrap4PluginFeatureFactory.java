@@ -1,4 +1,4 @@
-package it.gun88.fitnesse.theme;
+package com.github.gun88.fitnesse.theme;
 
 import fitnesse.plugins.PluginFeatureFactoryBase;
 
