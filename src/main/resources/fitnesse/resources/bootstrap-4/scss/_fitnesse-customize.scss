@@ -525,7 +525,8 @@ $page-margin-horizontal: 46px;
   @extend .badge-primary;
   border: none;
   padding-bottom: 5px;
-  padding-left: .7rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 
 .tag a {
