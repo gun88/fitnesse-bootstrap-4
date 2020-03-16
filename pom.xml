@@ -50,6 +50,19 @@
     <build>
         <plugins>
             <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <configuration>
+                    <target>
+                        <property name="runtime.classpath" refid="maven.compile.classpath"/>
+                        <java fork="true" failonerror="true"
+                              classpathref="maven.compile.classpath"
+                              classname="fitnesseMain.FitNesseMain"/>
+                    </target>
+                </configuration>
+            </plugin>
+
+            <plugin>
                 <groupId>com.github.warmuuh</groupId>
                 <artifactId>libsass-maven-plugin</artifactId>
                 <version>0.2.10-libsass_3.5.3</version>
