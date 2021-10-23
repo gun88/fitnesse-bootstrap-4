@@ -9,7 +9,7 @@ import {FooterComponent} from './component/footer/footer.component';
 import {FrontPageComponent} from './page/front-page/front-page.component';
 import {NotFoundComponent} from './page/not-found/not-found.component';
 import {ReadmeComponent} from './component/readme/readme.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from '@angular/common/http';
 import {RecapTableComponent} from './component/recap-table/recap-table.component';
 import {SuiteDemoTestsComponent} from './page/suite-demo-tests/suite-demo-tests.component';
 import {SetUpComponent} from './page/suite-demo-tests/set-up/set-up.component';
@@ -20,6 +20,7 @@ import {TestWarningCaseComponent} from './page/suite-demo-tests/test-warning-cas
 import {TestErrorCaseComponent} from './page/suite-demo-tests/test-error-case/test-error-case.component';
 import {DisabledFunctionComponent} from './page/disabled-function/disabled-function.component';
 import {ExecutionPageComponent} from './page/execution-page/execution-page.component';
+import {ProjectsComponent} from './component/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import {ExecutionPageComponent} from './page/execution-page/execution-page.compo
     TestErrorCaseComponent,
     DisabledFunctionComponent,
     ExecutionPageComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
